@@ -1,12 +1,14 @@
 package Projet;
+
 import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
+    }
 
-
-    public static int acceuilPrincipale(){
+    public static int acceuilPrincipale() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("\n--------Bienvenue Dans M2A_Events :) --------");
+        System.out.println("\n-------- Bienvenue Chez M2A_Events :) --------");
         System.out.println("Avec Nous Votre Evenement Sera un Succes \\(°o°)/\n");
         System.out.println(" 1 --> Visualiser les Salles  ('_')");
         System.out.println(" 2 --> Visualiser les Décorations ");
@@ -15,9 +17,10 @@ public class App {
         int choix = sc.nextInt();
         return choix;
     }
-    public static int visualiserSalle(int choix){
+
+    public static int visualiserSalle(int choix) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("\n--------Voici les Salles Disponivble dans Notre Companie :) --------");
+        System.out.println("\n-------- Voici les Salles Disponible dans Notre Compagnie :) --------");
         System.out.println("\n");
         System.out.println(" 1 --> Visualiser les Salles  ('_')");
         System.out.println(" 2 --> Visualiser les Décorations ");
@@ -27,4 +30,3 @@ public class App {
         return choix;
     }
 }
-    
