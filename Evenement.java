@@ -1,55 +1,94 @@
-package Projet;
+package com.javaproject.me2aevents;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 public class Evenement {
     private int idEvenement;
     private String nom;
     private int nombreInvite;
-    private LocalDate date;
+    private Date date;
     private int IdSalle;
-    private List<Equipement> equipements;
+    private int IdClient;
 
-    public Evenement(int idEvenement, String nom, int nombreInvite, LocalDate date) {
+    public Evenement() {
+    }
+
+    public int getIdClient() {
+        return IdClient;
+    }
+
+    public Evenement(int idEvenement, String nom, int nombreInvite, Date date, int idSalle, int idClient) {
         this.idEvenement = idEvenement;
         this.nom = nom;
         this.nombreInvite = nombreInvite;
         this.date = date;
+        IdSalle = idSalle;
+        IdClient = idClient;
     }
 
-    public Evenement() {
-    };
+    @Override
+    public String toString() {
+        return "Evenement{" +
+                "idEvenement=" + idEvenement +
+                ", nom='" + nom + '\'' +
+                ", nombreInvite=" + nombreInvite +
+                ", date=" + date +
+                ", IdSalle=" + IdSalle +
+                ", IdClient=" + IdClient +
+                '}';
+    }
+
+    public void setIdClient(int idClient) {
+        IdClient = idClient;
+    }
+
+    public Evenement(int idEvenement, String nom, int nombreInvite, Date date, int idSalle) {
+        this.idEvenement = idEvenement;
+        this.nom = nom;
+        this.nombreInvite = nombreInvite;
+        this.date = date;
+        IdSalle = idSalle;
+    }
 
     public int getIdEvenement() {
-        return this.idEvenement;
+        return idEvenement;
     }
 
     public void setIdEvenement(int idEvenement) {
         this.idEvenement = idEvenement;
     }
 
-    public String getnom() {
-        return this.nom;
+    public String getNom() {
+        return nom;
     }
 
-    public void setnom(String nom) {
+    public void setNom(String nom) {
         this.nom = nom;
     }
 
-    public int getnombreInvite() {
-        return this.nombreInvite;
+    public int getNombreInvite() {
+        return nombreInvite;
     }
 
-    public void setnombreInvite(int nombreInvite) {
+
+    public void setNombreInvite(int nombreInvite) {
         this.nombreInvite = nombreInvite;
     }
 
-    public LocalDate getdate() {
-        return this.date;
+    public java.util.Date getDate() {
+        return (java.util.Date) date;
     }
 
-    public void setdate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
+    }
+
+    public int getIdSalle() {
+        return IdSalle;
+    }
+
+    public void setIdSalle(int idSalle) {
+        IdSalle = idSalle;
     }
 
 }

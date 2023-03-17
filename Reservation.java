@@ -1,66 +1,75 @@
-package Projet;
+package com.javaproject.me2aevents;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
+import java.sql.Date;
 
 public class Reservation {
     private int idReservation;
     private int idClient;
     private int idSalle;
-    private LocalTime dureReservation;
-    private LocalDate dateReservation;
+    private int dureReservationenEnJour;
+    private Date dateReservation;
 
-    public Reservation(int idReservation, int idClient, int idSalle, LocalTime dureReservation,
-            LocalDate dateReservation) {
+    public Reservation(int idReservation, int idClient, int idSalle, int dureReservationenEnJour, Date dateReservation) {
         this.idReservation = idReservation;
         this.idClient = idClient;
         this.idSalle = idSalle;
+        this.dureReservationenEnJour = dureReservationenEnJour;
         this.dateReservation = dateReservation;
-        this.dureReservation = dureReservation;
     }
 
     public Reservation() {
-    };
+
+    }
+
 
     public int getIdReservation() {
         return idReservation;
+    }
+
+    public void setIdReservation(int idReservation) {
+        this.idReservation = idReservation;
     }
 
     public int getIdClient() {
         return idClient;
     }
 
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
+
     public int getIdSalle() {
         return idSalle;
-    }
-
-    public LocalDate getDateReservation() {
-        return dateReservation;
-    }
-
-    public LocalTime getDureReservation() {
-        return dureReservation;
-    }
-
-    public void setidReservation(int idReservation) {
-        this.idReservation = idReservation;
     }
 
     public void setIdSalle(int idSalle) {
         this.idSalle = idSalle;
     }
 
-    public void setidClient(int idClient) {
-        this.idClient = idClient;
+    public int getDureReservationenEnJour() {
+        return dureReservationenEnJour;
     }
 
-    public void setdateReservation(LocalDate dateReservation) {
+    public void setDureReservationenEnJour(int dureReservationenEnJour) {
+        this.dureReservationenEnJour = dureReservationenEnJour;
+    }
+
+    public Date getDateReservation() {
+        return dateReservation;
+    }
+
+    public void setDateReservation(Date dateReservation) {
         this.dateReservation = dateReservation;
     }
 
-    public void setDureReservation(LocalTime dureReservation) {
-        this.dureReservation = dureReservation;
+    @Override
+    public String toString() {
+        return "Reservation{" +
+                "idReservation=" + idReservation +
+                ", idClient=" + idClient +
+                ", idSalle=" + idSalle +
+                ", dureReservationenEnJour=" + dureReservationenEnJour +
+                ", dateReservation=" + dateReservation +
+                '}';
     }
-
 }
