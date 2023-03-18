@@ -115,8 +115,8 @@ public class App {
             System.out.println("             ┼┼┼┼█░░█─▀▄░░░░░░░▄▀─█░░█┼┼┼           ");
             System.out.println("             ┼██░██░████░██░░░██░░░█████┼           ");
             System.out.println("             ┼██▄██░██▄▄░██░░░██░░░██░██┼           ");
-            System.out.println("              ┼██▀██░██▀▀░██░░░██░░░██░██┼           ");
-            System.out.println("              ┼██░██░████░████░████░█████┼           ");
+            System.out.println("             ┼██▀██░██▀▀░██░░░██░░░██░██┼           ");
+            System.out.println("             ┼██░██░████░████░████░█████┼           ");
             System.out.println("╭────────────────────────────────────────────────────╮");
             System.out.println("|                                                    |");
             System.out.println("|           ✦ Bienvenue Chez M2A_Events ✦           |");
@@ -133,7 +133,7 @@ public class App {
             System.out.println("                     \\  (oo)\\ _______               ");
             System.out.println("                      \\ (__)\\        )\\/\\         ");
             System.out.println("                             ||----w |                ");
-            System.out.println(  "                             ||     ||                ");
+            System.out.println("                             ||     ||                ");
             i = sc.nextInt();
         } catch (InputMismatchException e) {
             e.printStackTrace();
@@ -151,10 +151,10 @@ public class App {
             System.out.println("             ┼┼┼┼┼┼┼┼█░░█░░░░░█░░█┼┼┼┼┼┼┼           ");
             System.out.println("             ┼┼┼┼─▄▄──█░░░▀█▀░░░█──▄▄─┼┼┼           ");
             System.out.println("             ┼┼┼┼█░░█─▀▄░░░░░░░▄▀─█░░█┼┼┼           ");
-            System.out.println("              ┼██░██░████░██░░░██░░░█████┼           ");
-            System.out.println("              ┼██▄██░██▄▄░██░░░██░░░██░██┼           ");
-            System.out.println("              ┼██▀██░██▀▀░██░░░██░░░██░██┼           ");
-            System.out.println("              ┼██░██░████░████░████░█████┼           ");
+            System.out.println("             ┼██░██░████░██░░░██░░░█████┼           ");
+            System.out.println("             ┼██▄██░██▄▄░██░░░██░░░██░██┼           ");
+            System.out.println("             ┼██▀██░██▀▀░██░░░██░░░██░██┼           ");
+            System.out.println("             ┼██░██░████░████░████░█████┼           ");
             System.out.println("╭────────────────────────────────────────────────────╮");
             System.out.println("|                                                    |");
             System.out.println("|           ✦ Bienvenue Chez M2A_Events ✦           |");
@@ -179,7 +179,7 @@ public class App {
             System.out.println("               ┼┼┼┼┼┼┼▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄┼┼┼┼┼┼            ");
             System.out.println("               ┼┼┼┼┼┼┼█▒▒░░░░░░░░░▒▒█┼┼┼┼┼┼            ");
             System.out.println("               ┼┼┼┼┼┼┼┼█░░█░░░░░█░░█┼┼┼┼┼┼┼            ");
-            System.out.println("             ┼┼┼┼─▄▄──█░░░▀█▀░░░█──▄▄─┼┼┼             ");
+            System.out.println("               ┼┼┼┼─▄▄──█░░░▀█▀░░░█──▄▄─┼┼┼             ");
             System.out.println("               ┼┼┼┼█░░█─▀▄░░░░░░░▄▀─█░░█┼┼┼            ");
             System.out.println("╭────────────────────────────────────────────────────╮");
             System.out.println("|                                                    |");
@@ -204,8 +204,8 @@ public class App {
         try {
             Scanner sc = new Scanner(System.in);
             System.out.println("╭────────────────────────────────────────────────────╮");
-         
 
+            System.out.println("|                ✦Tableau De Bord✦                  |");
             System.out.println("|                                                    |");
             System.out.println("╰────────────────────────────────────────────────────╯");
             System.out.println("Avec Nous Votre Evenement Sera un Succes \n           ");
@@ -248,10 +248,9 @@ public class App {
 
             C.inscrire(C);
         } catch (InputMismatchException e) {
-            e.printStackTrace();
-        }
+         
 
-
+        
         return C;
     }
 
@@ -333,12 +332,11 @@ public class App {
                 System.out.println("❀❀❀ Connexion Reussi!! ❀❀❀");
                 id = identifiant;
             } else {
-                System.out.println("⚠️⚠️ Ce Compte n'existe pas !!!! ⚠️⚠️");
-                System.out.println("❀ Voulez-vous vous inscrire ? ❀");
-     
+                System.out.println("⚠️⚠️ Ce Compte n'existe pas !!!! ⚠
 
-                if (choix == 1) {
-            
+                
+
+                    
                     Client client = new Client();
                     client.inscrire(creerClient(client));
                     id = client.getId();
@@ -384,16 +382,15 @@ public class App {
             e.printStackTrace();
         }
 
-        return id;
-    }
+     
 
-
+    
+            
     public static Evenement creerEvenement(Evenement Ev, int idClient, int idSalle) throws ParseException, InputMismatchException {
         Scanner sc = new Scanner(System.in);
 
-        try {
-     
 
+            
             System.out.println("❀❀❀ Entrer Le Nombre D'invité ❀❀❀");
             int nombreInvite = sc.nextInt();
             System.out.println("❀❀❀ Entrer La Date de L'Evenement en yyyy-MM-dd ❀❀❀");
@@ -425,27 +422,24 @@ public class App {
             ?.");
             int choix = sc.nextInt();
             if (choix == 1) {
-                Reservation R = new Res ervation();
-                System.out.println("❀❀❀ Entrer la Durée de Réservation En Jour ❀❀❀");
-                int dureReservationenEnJour = sc.nextInt();
-                int idSalle = E.getIdSalle();
-                Date date = (Date) E.getDate();
 
-                R.setDureReservationenEnJour(dureReservationenEnJour);
-                R.setIdClient(idClient);
-                R.setIdSalle(idSalle);
-                R.setDateReservation(date);
+    Reservation R = new Res ervation();
 
-                Client C = new Client();
-                C.faireReservation(R);
-            }
-        } catch (InputMismatchException e) {
-            e.printStackTrace();
+    System.out.println("❀❀❀ Entrer la Durée de 
+    int dureReservationenEnJour =
+    int idSalle = E.getIdSalle();
+
+    R.setDureReservationenEnR.setIdClient(idClientR.setIdSalle(idSalle);
+
+    Client C = new Client(    }
+    
+    
+        tch (InputMismatchEx
+        e.printStackTrace();
         }
 
-    }
 
-
+    
     public static void pageConnexion(int id, int choixClient) {
         Scanner sc = new Scanner(System.in);
         String choixMenu;
@@ -515,36 +509,36 @@ public class App {
             }
         } while (choixMenu.equals("y"));
 
-    }
 
-        Scanner sc = new Scanner(System.in);
-        Employe E = new Employe();
-        String choixMenu;
-        do {
-            switch (choixEmploye) {
-                case 1:
-                    E.gererReservation();
-                    break;
-                case 2:
-                    E.voirAllReservation();
-                    break;
-                case 3:
-                    Salle S = new Salle();
-                    creationDeSalle(S);
-                    break;
-                case 4:
-                    break;
-                default:
-                    System.out.println("Choix Indisponible😔😔");
-                    break;
-            }
-            if (choixEmploye == 4) {
-                choixMenu = "k";
-            } else {
-                System.out.println("\nVoulez-vous Retourner Au menu Cher Client ?👀");
-                System.out.print("👉🏽Taper *y* pour OUI ou N'importe Quelle Touche pour NON !! : ");
-                choixMenu = sc.next();
-            }
+    
+    Scanner sc = new Scanner(S
+    Employe E = new ESt
+    i
+        
+            ch (cho
+                 1:
+                E.gere
+                bre
+                 2:
+                E.voir
+                bre
+                 3:
+                Salle S = new Salle
+                creati
+                bre
+                 4:
+                brea
+                ult:
+                System
+         
+        }
+            choixEmploye == 
+            choi
+            se {
+            System.out.println("\nVoulez-vous Retourner Au menu Cher Client ?👀");
+            System.out.print("👉🏽
+         
+       }
         } while (choixMenu.equals("y"));
 
     }
@@ -566,6 +560,5 @@ public class App {
         S.setDispo(dispo);
         E.creerSalle(S);
 
-    }
-}
+ 
 
