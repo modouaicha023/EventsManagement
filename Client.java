@@ -23,9 +23,10 @@ public class Client extends Personne implements Personable<Client> {
             pstmt.setString(7, C.getMdp());
             int success = pstmt.executeUpdate();
             if (success != 0) {
-                System.out.println("Felicitations Votre Compte a été crée \\(°o°)/ ");
+                System.out.println("Felicitations Votre Compte a été crée 🎉🎉 ");
             } else
-                System.out.println("Désolé !! /(-_-)\\Une erreur s'est produit lors de la création de votre compte !! ");
+                System.out
+                        .println("Désolé !!😔😔Une erreur s'est produit lors de la création de votre compte !! ");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -43,7 +44,8 @@ public class Client extends Personne implements Personable<Client> {
             pstm.setString(2, mdp);
             ResultSet resultatRequete = pstm.executeQuery();
 
-            // Si le résultat de la requête est égal à 1, l'utilisateur est dans la base de données
+            // Si le résultat de la requête est égal à 1, l'utilisateur est dans la base de
+            // données
             if (resultatRequete.next()) {
                 int nbUtilisateurs = resultatRequete.getInt("nbUtilisateurs");
                 if (nbUtilisateurs >= 1) {
@@ -60,13 +62,13 @@ public class Client extends Personne implements Personable<Client> {
     public void rechercherSalle(int capacite) {
         con = DBConnection.createDBConnection();
         String query = "select * from salle where capacite >=" + capacite;
-        System.out.println("Noms des Salles\n");
+        System.out.println("❀ Noms des Salles\n ❀");
         try {
             Statement stmt = con.createStatement();
             ResultSet result = stmt.executeQuery(query);
             while (result.next()) {
                 System.out.format("%s\n", result.getString(2));
-                System.out.println("-------------------------------------");
+                System.out.println("❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -82,8 +84,10 @@ public class Client extends Personne implements Personable<Client> {
             Statement stmt = con.createStatement();
             ResultSet result = stmt.executeQuery(query);
             while (result.next()) {
-                System.out.format("%d\t%s\t%.2f\t%d\n", result.getString(2), result.getInt(3), result.getBoolean(4), result.getString(5));
-                System.out.println("------------------------------------------------------------------------------------------------------------");
+                System.out.format("%d\t%s\t%.2f\t%d\n", result.getString(2), result.getInt(3), result.getBoolean(4),
+                        result.getString(5));
+                System.out.println(
+                        "❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -104,9 +108,10 @@ public class Client extends Personne implements Personable<Client> {
             pstmt.setInt(6, Ev.getIdClient());
             int success = pstmt.executeUpdate();
             if (success != 0) {
-                System.out.println("Felicitations Votre Evenement a été crée \\(°o°)/ ");
+                System.out.println("Felicitations Votre Evenement a été crée 🎉🎉 ");
             } else
-                System.out.println("Désolé !! /(-_-)\\Une erreur s'est produit lors de la création de votre Evenement !! ");
+                System.out.println(
+                        "Désolé !! 😔😔Une erreur s'est produit lors de la création de votre Evenement !! ");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -125,12 +130,13 @@ public class Client extends Personne implements Personable<Client> {
             pstmt.setDate(5, (Date) R.getDateReservation());
             int success = pstmt.executeUpdate();
             if (success != 0) {
-                System.out.println("La Réservationa été crée \\(°o°)/ ");
+                System.out.println("La Réservationa été crée 🎉🎉 ");
             } else
-                System.out.println("Désolé !! /(-_-)\\Une erreur s'est produit lors de la création de la Réservation !! ");
+                System.out.println(
+                        "Désolé !! 😔😔Une erreur s'est produit lors de la création de la Réservation !! ");
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Désolé !! /(-_-)\\Une erreur s'est produit lors de la création de la Réservation !! ");
+            System.out.println("Désolé !! 😔😔Une erreur s'est produit lors de la création de la Réservation !! ");
         }
 
     }
@@ -139,8 +145,8 @@ public class Client extends Personne implements Personable<Client> {
 
         con = DBConnection.createDBConnection();
         String query = "select * from reservation where idClient =" + id;
-        System.out.println("\n                    Réservations                       ");
-        System.out.println("---------------------------------------------------------");
+        System.out.println("\n❀                    Réservations                     ❀");
+        System.out.println("❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀");
 
         try {
             Statement stmt = con.createStatement();
@@ -148,8 +154,10 @@ public class Client extends Personne implements Personable<Client> {
             int n = 0;
             while (result.next()) {
                 n++;
-                System.out.format("Reservation %d \nNumero Réservation : %d\nNumero ID Client : %d\nNumero ID Salle : %d\nDurée de  Réservationen En Jour : %d\nDate de Réservation : %s\n", n, result.getInt(1), result.getInt(2), result.getInt(3), result.getInt(4), result.getDate(5));
-                System.out.println("---------------------------------------------------------");
+                System.out.format(
+                        "Reservation %d \nNumero Réservation : %d\nNumero ID Client : %d\nNumero ID Salle : %d\nDurée de  Réservationen En Jour : %d\nDate de Réservation : %s\n",
+                        n, result.getInt(1), result.getInt(2), result.getInt(3), result.getInt(4), result.getDate(5));
+                System.out.println("❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -164,12 +172,11 @@ public class Client extends Personne implements Personable<Client> {
         try {
             Statement stmt = con.createStatement();
             ResultSet result = stmt.executeQuery(query);
-            System.out.println("La Réservation est Supprimée");
+            System.out.println("La Réservation est Supprimée✅✅");
         } catch (Exception e) {
             e.printStackTrace();
 
         }
     }
-
 
 }
