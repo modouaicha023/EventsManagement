@@ -79,9 +79,6 @@ public abstract class Personne {
 
     public Personne() {
     }
-
-
-
     @Override
     public String toString() {
         return "Personne{" +

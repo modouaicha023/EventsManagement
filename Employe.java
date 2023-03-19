@@ -55,7 +55,8 @@ public class Employe extends Personne implements Personable<Employe> {
         return resultat;
     }
 
-    public void voirAllReservation() {
+    public boolean voirAllReservation() {
+        boolean r=false;
         con = DBConnection.createDBConnection();
         String query = "select * from reservation";
         System.out.println("\n                    Réservations                       ");
@@ -70,10 +71,12 @@ public class Employe extends Personne implements Personable<Employe> {
                 System.out.format("Reservation %d \nNumero Réservation : %d\nNumero ID Client : %d\nNumero ID Salle : %d\nDurée de  Réservationen En Jour : %d\nDate de Réservation : %s\n", n, result.getInt(1), result.getInt(2), result.getInt(3), result.getInt(4), result.getDate(5));
                 System.out.println("---------------------------------------------------------");
             }
+            r=true;
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        return r;
     }
 
 
@@ -99,10 +102,7 @@ public class Employe extends Personne implements Personable<Employe> {
         }
     }
 
-    public void gererReservation() {
 
-
-    }
 
 
 }

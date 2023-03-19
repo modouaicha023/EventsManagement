@@ -15,31 +15,31 @@ public class Visiteur {
 
     public int rechercherSalle(int capacite) throws InputMismatchException {
         con = DBConnection.createDBConnection();
-        String query = "select * from salle where capacite >=" + capacite;
-        System.out.println("Noms des Salles : \n");
+        String query = "select * from salle where capacite >= ? and disponible=0 order by capacite";
+        System.out.println("👉🏽 Noms des Salles : \n");
         int n = 0;
         int choixSalle = 0;
         try {
             Statement stmt = con.createStatement();
-            ResultSet result = stmt.executeQuery(query);
+            PreparedStatement pstmt = con.prepareStatement(query);
+            pstmt.setInt(1, capacite);
+            ResultSet result = pstmt.executeQuery();
             while (result.next()) {
                 n++;
                 System.out.format(" %d. %s\n", result.getInt(1), result.getString(2));
-                System.out.println("-------------------------------------");
+                System.out.println("🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼");
             }
+            Scanner sc = new Scanner(System.in);
+            System.out.print(" Voulez-Vous  Visualiser en Details Une Salle : ");
+            System.out.println(" 1 🌼  OUI  🌼");
+            System.out.println(" 2 🌼  NON  🌼");
+            System.out.print(" Faite Votre Choix : ");
             try {
-                Scanner sc = new Scanner(System.in);
-                System.out.print("Voulez-Vous  Visualiser en Details Une Salle : ");
-                System.out.println("\n 1.  OUI");
-                System.out.println(" 2.  NON ");
-                System.out.print("Faite Votre Choix : ");
                 int choix = sc.nextInt();
                 if (choix == 1) {
-                    System.out.print("Choisis le numero de Salle : ");
+                    System.out.print("🌼🌼🌼 Choisis le numero de Salle : ");
                     int choixSalleV = sc.nextInt();
                     choixSalle = visualiserDetails(choixSalleV);
-                } else {
-                    choixSalle = 0;
                 }
             } catch (InputMismatchException e) {
                 e.printStackTrace();
@@ -59,9 +59,9 @@ public class Visiteur {
             Statement stmt = con.createStatement();
             ResultSet result = stmt.executeQuery(query);
             while (result.next()) {
-                System.out.println("-------------------------------------------------\n");
+                System.out.println("🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼\n");
                 System.out.format("ID : %d \nNom De La Salle : %s \nCapacité : %d\nDescriptio : %s\n", result.getInt(1), result.getString(2), result.getInt(3), result.getString(5));
-                System.out.println("-------------------------------------------------\n");
+                System.out.println("🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼\n");
             }
         } catch (Exception e) {
             e.printStackTrace();
