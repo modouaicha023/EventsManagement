@@ -12,6 +12,7 @@ public class Equipement {
         this.cout = cout;
         this.disponible = disponible;
     }
+    
 
     public String getNom() {
         return nom;

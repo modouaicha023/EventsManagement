@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 public class Employe extends Personne implements Personable<Employe> {
     Connection con;
 
+    
     public void inscrire(Employe C) {
         Connection con = DBConnection.createDBConnection();
         String query = "insert into employe values(?,?,?,?,?,?,?)";

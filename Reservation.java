@@ -2,6 +2,7 @@ package com.javaproject.me2aevents;
 
 import java.sql.Date;
 
+
 public class Reservation {
     private int idReservation;
     private int idClient;

@@ -16,6 +16,7 @@ public class Evenement {
     public int getIdClient() {
         return IdClient;
     }
+    
 
     public Evenement(int idEvenement, String nom, int nombreInvite, Date date, int idSalle, int idClient) {
         this.idEvenement = idEvenement;

@@ -8,6 +8,7 @@ public class Client extends Personne implements Personable<Client> {
     public Client() {
     }
 
+    
     @Override
     public void inscrire(Client C) {
         con = DBConnection.createDBConnection();
