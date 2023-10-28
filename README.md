@@ -1,30 +1,26 @@
 # M2A_Events
-M2A_Events est un projet en java avec une interface console  qui permet la gestion des réservations d'une entreprise qui loue des salles et des équipements.
+M2A_Events is a Java project with a console interface that allows management of reservations for a company that rents rooms and equipment.
 
-## Technologies
+## Tech Stack
+M2A_Events uses the following technologies:
+-Java
+- MySQL for the database
 
-M2A_Events utilise les technologies suivantes :
-- Java
-- MySQL pour la base de données
+## Features
 
-## Fonctionnalités
-
-BaobabBrain propose les fonctionnalités suivantes :
-
-### Client
-
-- Inscription et connexion
-- Recherche, Visualser les Salles
-- Planifier un évenement
-- Créer, Voir et Supprimer sa Réservation
+BaobabBrain offers the following features :
+### Customer
+- Registration and login
+- Search, View Rooms
+- Plan an event
+- Create, View and Delete your Reservation
   
-### Employe
+### Employee
+- Registration and login
+- Create, View Rooms
+- View all Reservations
 
-- Inscription et connexion
-- Créer, Visualser les Salles
-- Voir tout les Réservations 
-
-## Auteurs
+## Authors
 
 - [Maman Nafy Ndiaye](https://github.com/Mnafyndiaye)
 - [Modou Aicha Diop](https://github.com/modouaicha023)
